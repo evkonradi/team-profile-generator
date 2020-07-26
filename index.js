@@ -8,6 +8,8 @@ const { writeFile, copyFile } = require('./generate-site.js');
 var team = [];
 
 const promptManager = () =>{
+    console.log('\n******************************\n');
+    
     return inquirer.prompt([
         {
             type: 'input',
@@ -199,7 +201,9 @@ const promptIntern = () =>{
 }
 
 const promptTeamMember = ()  => {
-    
+  
+    console.log('\n******************************\n');
+
     inquirer.prompt({
         type: 'list',
         message: 'What would you like to do?',

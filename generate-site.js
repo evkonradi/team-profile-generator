@@ -10,7 +10,7 @@ const writeFile = fileContent => {
   
         resolve({
           ok: true,
-          message: 'File created!'
+          message: 'index.html(./dist/index.html) file is created!'
         });
       });
     });

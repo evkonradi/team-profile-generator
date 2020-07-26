@@ -83,7 +83,7 @@ const promptEngineer = () =>{
                   if (nameInput) {
                     return true;
                   } else {
-                    console.log("Please enter Engineer's name!");
+                    console.log(" Please enter Engineer's name!");
                     return false;
                   }
                 }
@@ -96,7 +96,7 @@ const promptEngineer = () =>{
                   if (nameInput && !isNaN(nameInput) && parseInt(nameInput) > 0) {
                     return true;
                   } else {
-                    console.log("Please enter Engineer's id (number greater that zero)!");
+                    console.log(" Please enter Engineer's id (number greater that zero)!");
                     return false;
                   }
                 }
@@ -110,7 +110,7 @@ const promptEngineer = () =>{
                   if (nameInput && re.test(nameInput)) {
                         return true;
                   } else {
-                    console.log("Please enter Engineer's email!");
+                    console.log(" Please enter Engineer's email!");
                     return false;
                   }
                 }
@@ -123,7 +123,7 @@ const promptEngineer = () =>{
                   if (nameInput) {
                     return true;
                   } else {
-                    console.log("Please enter Engineer's github name!");
+                    console.log(" Please enter Engineer's github name!");
                     return false;
                   }
                 }
@@ -147,7 +147,7 @@ const promptIntern = () =>{
                   if (nameInput) {
                     return true;
                   } else {
-                    console.log("Please enter Intern's name!");
+                    console.log(" Please enter Intern's name!");
                     return false;
                   }
                 }
@@ -160,7 +160,7 @@ const promptIntern = () =>{
                   if (nameInput && !isNaN(nameInput) && parseInt(nameInput) > 0) {
                     return true;
                   } else {
-                    console.log("Please enter Intern's id (number greater that zero)!");
+                    console.log(" Please enter Intern's id (number greater that zero)!");
                     return false;
                   }
                 }
@@ -174,7 +174,7 @@ const promptIntern = () =>{
                   if (nameInput && re.test(nameInput)) {
                         return true;
                   } else {
-                    console.log("Please enter Intern's email!");
+                    console.log(" Please enter Intern's email!");
                     return false;
                   }
                 }
@@ -187,7 +187,7 @@ const promptIntern = () =>{
                   if (nameInput) {
                     return true;
                   } else {
-                    console.log("Please enter Intern's school name!");
+                    console.log(" Please enter Intern's school name!");
                     return false;
                   }
                 }

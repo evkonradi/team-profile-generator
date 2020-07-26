@@ -17,7 +17,7 @@ const promptManager = () =>{
               if (nameInput) {
                 return true;
               } else {
-                console.log("Please enter Manager's name!");
+                console.log(" Please enter Manager's name!");
                 return false;
               }
             }
@@ -27,10 +27,10 @@ const promptManager = () =>{
             name: 'id',
             message: "What is Manager's id (number greater that zero)? (Required)",
             validate: nameInput => {
-              if (nameInput) {
+              if (nameInput && !isNaN(nameInput) && parseInt(nameInput) > 0) {
                 return true;
               } else {
-                console.log("Please enter Manager's id (number greater that zero)!");
+                console.log(" Please enter Manager's id (number greater that zero)!");
                 return false;
               }
             }
@@ -40,10 +40,11 @@ const promptManager = () =>{
             name: 'email',
             message: "What is Manager's email? (Required)",
             validate: nameInput => {
-              if (nameInput) {
+              const re = /\S+@\S+\.\S+/;
+              if (nameInput && re.test(nameInput)) {
                 return true;
               } else {
-                console.log("Please enter Manager's email!");
+                console.log(" Please enter Manager's email!");
                 return false;
               }
             }
@@ -51,12 +52,12 @@ const promptManager = () =>{
         {
             type: 'input',
             name: 'officeNumber',
-            message: "What is Manager's office number? (Required)",
+            message: "What is Manager's office number (number greater that zero)? (Required)",
             validate: nameInput => {
-              if (nameInput) {
+              if (nameInput && !isNaN(nameInput) && parseInt(nameInput) > 0) {
                 return true;
               } else {
-                console.log("Please enter Manager's office number!");
+                console.log(" Please enter Manager's office number (number greater that zero)!");
                 return false;
               }
             }
@@ -88,12 +89,12 @@ const promptEngineer = () =>{
             {
                 type: 'input',
                 name: 'id',
-                message: "What is Engineer's id? (Required)",
+                message: "What is Engineer's id (number greater that zero)? (Required)",
                 validate: nameInput => {
-                  if (nameInput) {
+                  if (nameInput && !isNaN(nameInput) && parseInt(nameInput) > 0) {
                     return true;
                   } else {
-                    console.log("Please enter Engineer's id!");
+                    console.log("Please enter Engineer's id (number greater that zero)!");
                     return false;
                   }
                 }
@@ -103,8 +104,9 @@ const promptEngineer = () =>{
                 name: 'email',
                 message: "What is Engineer's email? (Required)",
                 validate: nameInput => {
-                  if (nameInput) {
-                    return true;
+                  const re = /\S+@\S+\.\S+/;
+                  if (nameInput && re.test(nameInput)) {
+                        return true;
                   } else {
                     console.log("Please enter Engineer's email!");
                     return false;
@@ -151,12 +153,12 @@ const promptIntern = () =>{
             {
                 type: 'input',
                 name: 'id',
-                message: "What is Intern's id? (Required)",
+                message: "What is Intern's id (number greater that zero)? (Required)",
                 validate: nameInput => {
-                  if (nameInput) {
+                  if (nameInput && !isNaN(nameInput) && parseInt(nameInput) > 0) {
                     return true;
                   } else {
-                    console.log("Please enter Intern's id!");
+                    console.log("Please enter Intern's id (number greater that zero)!");
                     return false;
                   }
                 }
@@ -166,8 +168,9 @@ const promptIntern = () =>{
                 name: 'email',
                 message: "What is Intern's email? (Required)",
                 validate: nameInput => {
-                  if (nameInput) {
-                    return true;
+                  const re = /\S+@\S+\.\S+/;
+                  if (nameInput && re.test(nameInput)) {
+                        return true;
                   } else {
                     console.log("Please enter Intern's email!");
                     return false;

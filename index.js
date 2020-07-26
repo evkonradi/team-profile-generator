@@ -2,6 +2,8 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
+const generatePage = require('./src/page-template.js');
+const { writeFile, copyFile } = require('./generate-site.js');
 
 var team = [];
 
@@ -203,6 +205,18 @@ const promptTeamMember = ()  => {
     })
     .then(({action})=>{
         if (action === 'Finish building my team'){
+            writeFile(generatePage(team))
+            .then(writeFileResponse => {
+                console.log(writeFileResponse);
+                return copyFile();
+              })
+              .then(copyFileResponse => {
+                console.log(copyFileResponse);
+              })
+              .catch(err => {
+                console.log(err);
+              });
+
             return;
         }
         else if (action === 'Add Engineer'){
@@ -215,5 +229,5 @@ const promptTeamMember = ()  => {
     
 };
 
-
 promptManager();
+

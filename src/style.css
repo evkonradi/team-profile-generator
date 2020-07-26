@@ -1,0 +1,29 @@
+body{
+    color: white;
+}
+
+#main{
+    width: 60%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.heading-bg{
+    background-color: #e44a55;
+}
+
+.card-style{
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 0;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.7);
+    margin-top: 30px;
+}
+
+.card-text{
+    color:black;
+}
+
+.card-margin-ul{
+    margin: 30px 20px 30px 20px;
+}

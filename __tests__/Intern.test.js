@@ -10,11 +10,19 @@ test('creates an Intern object', () =>{
     expect(intern.school).toEqual(expect.any(String));
 });
 
-test('gets Intern Info as an object', () =>{
-    const intern = new Intern('Karl Arfs', 15, 'karfs@gmail.com', 'UT Austin');
+test('gets Intern data', () =>{
 
-    expect(intern.getInternInfo()).toHaveProperty('name');
-    expect(intern.getInternInfo()).toHaveProperty('id');
-    expect(intern.getInternInfo()).toHaveProperty('email');
-    expect(intern.getInternInfo()).toHaveProperty('school');
+    const name = 'Karl Arfs';
+    const id = 15;
+    const email = 'karfs@gmail.com';
+    const school = 'UT Austin';
+
+    const intern = new Intern(name, id, email, school);
+
+    expect(intern.getName()).toBe(name);
+    expect(intern.getId()).toBe(id);
+    expect(intern.getEmail()).toBe(email);
+    expect(intern.getSchool()).toBe(school);
+    expect(intern.getRole()).toBe('Intern');
+
 });

@@ -10,11 +10,20 @@ test('creates an Manager object', () =>{
     expect(manager.officeNumber).toEqual(expect.any(Number));
 });
 
-test('gets Manager Info as an object', () =>{
-    const manager = new Manager('Karl Arfs', 15, 'karfs@gmail.com', 10);
+test('gets Manager data', () =>{
 
-    expect(manager.getManagerInfo()).toHaveProperty('name');
-    expect(manager.getManagerInfo()).toHaveProperty('id');
-    expect(manager.getManagerInfo()).toHaveProperty('email');
-    expect(manager.getManagerInfo()).toHaveProperty('officeNumber');
+    const name = 'Karl Arfs';
+    const id = 15;
+    const email = 'karfs@gmail.com';
+    const officeNumber = 10;
+
+    const manager = new Manager(name, id, email, officeNumber);
+
+    expect(manager.getName()).toBe(name);
+    expect(manager.getId()).toBe(id);
+    expect(manager.getEmail()).toBe(email);
+    expect(manager.getOfficeNumber()).toBe(officeNumber);
+    expect(manager.getRole()).toBe('Manager');
+
 });
+

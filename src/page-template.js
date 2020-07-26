@@ -7,18 +7,17 @@ const generateTemMembers = teamData =>{
     return `
     ${teamData.filter(item => item instanceof Manager)
         .map(item => {
-            let {name, id, email, officeNumber} = item.getManagerInfo();
             return `
             <div class="card bg-light mb-3 card-style" style="max-width: 18rem;">
                 <div class="card-header bg-primary">
-                    <h2 class="card-title text-nowrap">${name}</h2>
+                    <h2 class="card-title text-nowrap">${item.getName()}</h2>
                     <h2 class="card-title text-nowrap"><i class="fas fa-mug-hot mr-2"></i>Manager</h2>
                 </div>
                 <div class="card-body">
                     <ul class="list-group card-text my-3">
-                        <li class="list-group-item text-nowrap">ID: ${id}</li>
-                        <li class="list-group-item text-nowrap">Email: <a href="mailto:${email}">${email}</a></li>
-                        <li class="list-group-item text-nowrap">Office number: ${officeNumber}</li>
+                        <li class="list-group-item text-nowrap">ID: ${item.getId()}</li>
+                        <li class="list-group-item text-nowrap">Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></li>
+                        <li class="list-group-item text-nowrap">Office number: ${item.getOfficeNumber()}</li>
                     </ul>
                 </div>
             </div>    
@@ -27,18 +26,17 @@ const generateTemMembers = teamData =>{
     }
     ${teamData.filter(item => item instanceof Engineer)
         .map(item => {
-            let {name, id, email, github} = item.getEngineerInfo();
             return `
             <div class="card bg-light mb-3 card-style" style="max-width: 18rem;">
                 <div class="card-header bg-primary">
-                    <h2 class="card-title text-nowrap">${name}</h2>
+                    <h2 class="card-title text-nowrap">${item.getName()}</h2>
                     <h2 class="card-title text-nowrap"><i class="fas fa-glasses mr-2"></i>Engineer</h2>
                 </div>
                 <div class="card-body">
                     <ul class="list-group card-text my-3">
-                        <li class="list-group-item text-nowrap">ID: ${id}</li>
-                        <li class="list-group-item text-nowrap">Email: <a href="mailto:${email}">${email}</a></li>
-                        <li class="list-group-item text-nowrap">GitHub: ${github}</li>
+                        <li class="list-group-item text-nowrap">ID: ${item.getId()}</li>
+                        <li class="list-group-item text-nowrap">Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></li>
+                        <li class="list-group-item text-nowrap">GitHub: ${item.getGitHub()}</li>
                     </ul>
                 </div>
             </div>    
@@ -47,18 +45,17 @@ const generateTemMembers = teamData =>{
     }
     ${teamData.filter(item => item instanceof Intern)
         .map(item => {
-            let {name, id, email, school} = item.getInternInfo();
             return `
             <div class="card bg-light mb-3 card-style" style="max-width: 18rem;">
                 <div class="card-header bg-primary">
-                    <h2 class="card-title text-nowrap">${name}</h2>
+                    <h2 class="card-title text-nowrap">${item.getName()}</h2>
                     <h2 class="card-title text-nowrap"><i class="fas fa-user-graduate mr-2"></i>Intern</h2>
                 </div>
                 <div class="card-body">
                     <ul class="list-group card-text my-3">
-                        <li class="list-group-item text-nowrap">ID: ${id}</li>
-                        <li class="list-group-item text-nowrap">Email: <a href="mailto:${email}">${email}</a></li>
-                        <li class="list-group-item text-nowrap">School: ${school}</li>
+                        <li class="list-group-item text-nowrap">ID: ${item.getId()}</li>
+                        <li class="list-group-item text-nowrap">Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></li>
+                        <li class="list-group-item text-nowrap">School: ${item.getSchool()}</li>
                     </ul>
                 </div>
             </div>    

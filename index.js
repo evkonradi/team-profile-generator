@@ -25,12 +25,12 @@ const promptManager = () =>{
         {
             type: 'input',
             name: 'id',
-            message: "What is Manager's id? (Required)",
+            message: "What is Manager's id (number greater that zero)? (Required)",
             validate: nameInput => {
               if (nameInput) {
                 return true;
               } else {
-                console.log("Please enter Manager's id!");
+                console.log("Please enter Manager's id (number greater that zero)!");
                 return false;
               }
             }

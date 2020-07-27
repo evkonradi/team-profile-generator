@@ -36,7 +36,7 @@ const generateTemMembers = teamData =>{
                     <ul class="list-group card-text my-3">
                         <li class="list-group-item text-nowrap">ID: ${item.getId()}</li>
                         <li class="list-group-item text-nowrap">Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></li>
-                        <li class="list-group-item text-nowrap">GitHub: ${item.getGitHub()}</li>
+                        <li class="list-group-item text-nowrap">GitHub: <a href="https://github.com/${item.getGitHub()}" target="_blank">${item.getGitHub()}</a></li>
                     </ul>
                 </div>
             </div>    

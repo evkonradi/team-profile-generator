@@ -21,6 +21,10 @@ https://drive.google.com/file/d/1bIE-hkkHEhDtsU0iN4ioFhjf9N6y7U5Q/view?usp=shari
 
 You can find the repository here: https://github.com/evkonradi/team-profile-generator.
 
+# Example of the HTML page generated:
+
+https://evkonradi.github.io/team-profile-generator/dist/index.html
+
 # Page preview
 
 This is the preview of the initial page:

@@ -24,4 +24,4 @@ You can find the repository here: https://github.com/evkonradi/team-profile-gene
 # Page preview
 
 This is the preview of the initial page:
-<img src="./src/PagePreview.JPG">
+<img src="./src/PagePreview.jpg">
